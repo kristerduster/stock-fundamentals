@@ -11,6 +11,12 @@ def ctn(x):
     elif "M" in x:
         x = x.split("M")
         x=float(("").join(x))*1000000
+    elif "K" in x:
+        x = x.split("K")
+        x=float(("").join(x))*1000
+    elif "T" in x:
+        x = x.split("T")
+        x=float(("").join(x))*1000000000000
     return(x)
 #function takes string parameter ticker, gets stats valuation (dataframe), switches rows and columns, deletes unnecessary columns
 def org_stats_valuation(ticker): 
